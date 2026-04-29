@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Vision Grid - Innovative Web Solutions for Creative Entrepreneurs</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,14 +27,20 @@
                     <span></span>
                 </button>
                 <ul class="nav-links" id="navLinks">
+                    <button class="mobile-close-btn" id="mobileCloseBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Our Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact us</a></li>
+                    <li class="mobile-cta"><button class="btn-primary btn-mobile" onclick="window.location.href='#contact'">Get a quote</button></li>
                 </ul>
-                <button class="btn-primary" onclick="window.location.href='#contact'">Get a quote</button>
+                <button class="btn-primary desktop-cta" onclick="window.location.href='#contact'">Get a quote</button>
             </div>
         </div>
     </nav>
@@ -545,13 +551,13 @@
             <div class="contact-content">
                 <div class="contact-info">
 
-                    <div class="contact-card" style="margin-top: 8%;">
+                    <div class="contact-card contact-card-first">
                         <h4>📧 Email Us</h4>
                         <p class="contact-description">Get a detailed response within 24 hours</p>
                         <a href="mailto:devvisionaries@gmail.com" class="contact-link">devvisionaries@gmail.com</a>
                     </div>
 
-                    <div class="contact-card contact-card-highlight" style="cursor: pointer;" id="bookConsultationCard">
+                    <div class="contact-card contact-card-highlight" id="bookConsultationCard">
                         <h4>🎯 Book Your Free Consultation</h4>
                         <p class="contact-description">30-minute strategy session to discuss your project</p>
                         <a href="https://calendly.com/devvisionaries/30min" target="_blank" class="calendly-btn">
@@ -829,11 +835,18 @@
 
         // Mobile Menu Toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileCloseBtn = document.getElementById('mobileCloseBtn');
         const navLinks = document.getElementById('navLinks');
 
         mobileMenuToggle.addEventListener('click', function () {
             navLinks.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu with close button
+        mobileCloseBtn.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
         });
 
         // Close mobile menu when clicking on a link
