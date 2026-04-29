@@ -45,7 +45,7 @@
             <div class="hero-content">
                 <h1>Innovative Web Solutions for<br>Creative Entrepreneurs</h1>
                 <p>At Vision Grid we specialize in delivering comprehensive web development and design services tailored
-                    to meet your unique business needs. From crafting user-friendly WordPress websites to creating
+                    to meet your unique business needs. From crafting user-friendly Wix websites to creating
                     dynamic and robust web applications, we bring your online presence to life with creativity,
                     expertise, strategy, and technical excellence to every project, ensuring exceptional results.</p>
                 <div class="hero-buttons">
@@ -74,8 +74,8 @@
                     <p>System Optimization<br />Efficiency Achieved</p>
                 </div>
                 <div class="stat-card">
-                    <h3>40+</h3>
-                    <p>Client Satisfaction Rating</p>
+                    <a href="#" target="_blank"><img src="./images/en-legend/en-legend/EN_legend_large.png" width="100px" height="100px"
+                            alt="wixpartner"></a>
                 </div>
                 <div class="stat-card">
                     <h3>80+</h3>
@@ -421,12 +421,24 @@
 
                 <div class="portfolio-item" data-category="wix">
                     <div class="portfolio-image">
-                        <a href="https://www.pickyeaterboston.com/" target="_blank"><img src="./images/PickyEaterPic.png"
-                                alt="WordPress Website"></a>
+                        <a href="https://www.pickyeaterboston.com/" target="_blank"><img
+                                src="./images/PickyEaterPic.png" alt="WordPress Website"></a>
                     </div>
                     <div class="portfolio-info">
                         <span class="project-category">Food/Travel</span>
                         <h4>Picky Eater Boston</h4>
+                        <p>Wix Websites</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="wix">
+                    <div class="portfolio-image">
+                        <a href="https://www.turkishhighways.com/" target="_blank"><img
+                                src="./images/Turkish Highways.png" alt="Wix Website"></a>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="project-category">Travel</span>
+                        <h4>Turkish Highways</h4>
                         <p>Wix Websites</p>
                     </div>
                 </div>
@@ -484,7 +496,7 @@
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="stars">⭐⭐⭐⭐</div>
                     <p class="testimonial-text">"Very responsive and easy to communicate with. The website was delivered
                         on time and looks amazing on mobile and desktop"</p>
                     <div class="testimonial-author">
@@ -508,7 +520,7 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="stars">⭐⭐⭐⭐</div>
                     <p class="testimonial-text">“Excellent support and communication throughout the project. Quick
                         revisions and very cooperative team.”</p>
                     <div class="testimonial-author">
@@ -532,19 +544,25 @@
 
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-card" style="margin-top: 10%;">
-                        <h4>Email Us at</h4>
-                        <p>devvisionaries@gmail.com</p>
+
+                    <div class="contact-card" style="margin-top: 8%;">
+                        <h4>📧 Email Us</h4>
+                        <p class="contact-description">Get a detailed response within 24 hours</p>
+                        <a href="mailto:devvisionaries@gmail.com" class="contact-link">devvisionaries@gmail.com</a>
+                    </div>
+
+                    <div class="contact-card contact-card-highlight" style="cursor: pointer;" id="bookConsultationCard">
+                        <h4>🎯 Book Your Free Consultation</h4>
+                        <p class="contact-description">30-minute strategy session to discuss your project</p>
+                        <a href="https://calendly.com/devvisionaries/30min" target="_blank" class="calendly-btn">
+                            Schedule Now →
+                        </a>
                     </div>
 
                     <div class="contact-card">
-                        <h4>Book Your Free Consultation</h4>
-                        <p>Schedule a call with our team</p>
-                    </div>
-
-                    <div class="contact-card">
-                        <h4>Call Us</h4>
-                        <p>+92 324 243 2266</p>
+                        <h4>📞 Call Us Directly</h4>
+                        <p class="contact-description">Speak directly with our expert team</p>
+                        <a href="tel:+923242432266" class="contact-link">+92 324 243 2266</a>
                     </div>
                 </div>
 
@@ -568,7 +586,6 @@
             </div>
         </div>
     </section>
-
 
 
     <!-- Newsletter Section -->
@@ -611,6 +628,7 @@
         </div>
     </footer>
 
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script>
         // Portfolio Filter Functionality
         document.addEventListener('DOMContentLoaded', function () {
@@ -813,18 +831,19 @@
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
 
-        mobileMenuToggle.addEventListener('click', function() {
+        mobileMenuToggle.addEventListener('click', function () {
             navLinks.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
         });
 
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function () {
                 navLinks.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
             });
         });
+
     </script>
 
 </body>
